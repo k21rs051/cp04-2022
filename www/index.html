@@ -183,6 +183,20 @@
       audio.src = "pin.wav";
       audio.play();
     };
+
+    function alarm2() {
+      var canvas = $("#mycanvas")[0];
+      var ctx = canvas.getContext("2d");
+      var img2 = new Image();
+      img2.src = "826040.jpg";
+      img2.onload = function(){
+        ctx.drawImage(img2, 0, 0, 200, 200);
+      };
+
+      var audio2 = new Audio();
+      audio2.src = "koukaon.mp3";
+      audio2.play();
+    };
     
     // ButtonAがクリックされた時の処理
     function btnAClick(e){
@@ -209,6 +223,17 @@
 
         
     }
+
+    // ButtonDがクリックされた時の処理
+    function btnDClick(e){
+        alarm2();
+        active = false;
+        period = 180;
+        $("#time").html("経過時間： 0");
+        $("#remain").html("残り時間： " + period);
+
+    }
+
     
  
     // 繰り返し実行する処理
