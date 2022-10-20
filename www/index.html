@@ -210,6 +210,8 @@
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         active = false;
+        $("#btnC").css("background-color","yellow");
+        $("#btnD").css("background-color","yellow");
         
     }
 
@@ -221,6 +223,8 @@
         $("#time").html("経過時間： 0");
         $("#remain").html("残り時間： " + period);
 
+        $("#btnC").css("background-color","green");
+
         
     }
 
@@ -231,6 +235,7 @@
         period = 180;
         $("#time").html("経過時間： 0");
         $("#remain").html("残り時間： " + period);
+        $("#btnD").css("background-color","green");
 
     }
 
